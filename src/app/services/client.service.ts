@@ -3,7 +3,6 @@ import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument 
 //'angularfire2/firestore';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-
 import { Client } from '../models/Client';
 
 @Injectable({
@@ -20,7 +19,6 @@ export class ClientService {
   constructor(private afs: AngularFirestore) {
     this.clientsCollection = this.afs.collection('clients', ref => ref.orderBy('lastName', 'asc'))
   }
-
 
   getClients(): Observable<Client[]> {
     this.clients = this.clientsCollection.snapshotChanges().pipe(map((changes) => {
