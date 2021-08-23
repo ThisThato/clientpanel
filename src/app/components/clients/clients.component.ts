@@ -16,18 +16,14 @@ export class ClientsComponent implements OnInit {
 
   ngOnInit(): void {
     this.clientService.getClients().subscribe(clients => {
-      console.log(clients)
-      this.getTotalOwed()
       this.clients = clients;
+      this.getTotalOwed()
     })
   }
 
   getTotalOwed() {
-    const total = this.clients.reduce((total, client) => {
-      const value = total + Number(client.balance)
-      console.log(value)
-      return value;
+    this.totalOwed = this.clients.reduce((total, client) => {
+      return total + Number(client.balance)
     }, 0)
   }
-
 }
