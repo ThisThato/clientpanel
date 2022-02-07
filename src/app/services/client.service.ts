@@ -9,7 +9,7 @@ import { Client } from '../models/Client';
   providedIn: 'root'
 })
 
-export class ClientService {
+export class ClientService { //Service Provides Us With Data
 
   clientsCollection: AngularFirestoreCollection<Client>;
   clientDoc: AngularFirestoreDocument<Client>;

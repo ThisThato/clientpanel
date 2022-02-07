@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
@@ -11,7 +11,7 @@ import { SettingsComponent } from './components/settings/settings.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ClientDetailsComponent } from './components/client-details/client-details.component';
 
-//routes
+//routes Per Component
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'register', component: RegisterComponent },
