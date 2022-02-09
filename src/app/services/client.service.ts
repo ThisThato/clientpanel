@@ -16,8 +16,8 @@ export class ClientService { //Service Provides Us With Data
   clients: Observable<Client[]>;
   client: Observable<Client>;
 
-  constructor(private afs: AngularFirestore) {
-    this.clientsCollection = this.afs.collection('clients', ref => ref.orderBy('lastName', 'asc'))
+  constructor(private firestore: AngularFirestore) {
+    this.clientsCollection = this.firestore.collection('manage.clients', ref => ref.orderBy('Surname', 'asc'))
   }
 
   getClients(): Observable<Client[]> {

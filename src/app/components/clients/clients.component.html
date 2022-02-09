@@ -4,7 +4,8 @@
   </div>
   <div class="col-md-6">
     <h5 class="text-right text text-secondary">Total Owed:
-      {{totalOwed | currency: "USD"}}</h5>
+      {{totalOwed | currency: "USD"}}
+    </h5>
   </div>
 </div>
 
@@ -25,8 +26,8 @@
   </thead>
   <tbody>
     <tr *ngFor="let client of clients">
-      <td>{{client.firstName}} {{client.lastName}}</td>
-      <td>{{client.email}}</td>
+      <td>{{client.Name}} {{client.Surname}}</td>
+      <td>{{client.Email}}</td>
       <td>{{client.balance | currency: "USD"}}</td>
       <td><a routerLink="client/{{client.id}}"
           class="btn btn-secondary btn-sm"><i

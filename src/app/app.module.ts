@@ -5,10 +5,6 @@ import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore'
 import { AngularFireAuthModule } from '@angular/fire/auth'
-// import { AngularFireModule } from 'angularfire2';
-// import { AngularFirestore } from 'angularfire2/firestore'
-// import { AngularFirestoreModule } from 'angularfire2/firestore';
-// import { AngularFireAuthModule } from 'angularfire2/auth'
 
 import { ClientService } from './services/client.service';
 
@@ -46,7 +42,6 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase, 'clientpanel'),
     AngularFirestoreModule,
-    // AngularFirestore,
     AngularFireAuthModule
   ],
   providers: [ClientService],

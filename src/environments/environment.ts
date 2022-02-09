@@ -6,13 +6,12 @@ export const environment = {
   production: false,
 
   firebase: {
-    apiKey: "AIzaSyBgRzzPDRPnotopzLdfc-Ip3lNWMSbd6bA",
-    authDomain: "client-panel-prod-98fc6.firebaseapp.com",
-    projectId: "client-panel-prod-98fc6",
-    storageBucket: "client-panel-prod-98fc6.appspot.com",
-    messagingSenderId: "233187135718",
-    appId: "1:233187135718:web:e09051d874fdcde00ceb27",
-    measurementId: "G-BXKDZ36PE1"
+    apiKey: "AIzaSyC9f7r_ft-BGa7V3iHpI0mGdjYeAcyeWZ8",
+    authDomain: "clientpanel-72eee.firebaseapp.com",
+    projectId: "clientpanel-72eee",
+    storageBucket: "clientpanel-72eee.appspot.com",
+    messagingSenderId: "220482483274",
+    appId: "1:220482483274:web:99e49aeb84f23e2667a2b3"
   }
 
 
