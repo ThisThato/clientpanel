@@ -3,6 +3,6 @@ export interface Client {
   Name?: string,
   Surname?: string,
   Email?: string,
-  phone?: string,
-  balance?: number
+  Phone?: string,
+  Balance?: number
 }

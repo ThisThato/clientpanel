@@ -28,7 +28,7 @@
     <tr *ngFor="let client of clients">
       <td>{{client.Name}} {{client.Surname}}</td>
       <td>{{client.Email}}</td>
-      <td>{{client.balance | currency: "USD"}}</td>
+      <td>{{client.Balance | currency: "USD"}}</td>
       <td><a routerLink="client/{{client.id}}"
           class="btn btn-secondary btn-sm"><i
             class="fa fa-arrow-circle-o-right"></i>Details</a>

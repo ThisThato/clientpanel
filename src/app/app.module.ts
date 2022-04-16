@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore'
 import { AngularFireAuthModule } from '@angular/fire/auth'
+import { FlashMessagesModule } from 'angular2-flash-messages';
 
 import { ClientService } from './services/client.service';
 
@@ -21,6 +22,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    FlashMessagesModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase, 'clientpanel'),
     AngularFirestoreModule,
     AngularFireAuthModule
