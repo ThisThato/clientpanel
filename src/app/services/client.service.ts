@@ -51,6 +51,11 @@ export class ClientService { //Service Provides Us With Data
     this.clientDoc.update(client);
   }
 
+  deleteClient(client: Client) {
+    this.clientDoc = this.firestore.doc(`manage.clients/${client.id}`);
+    this.clientDoc.delete();
+  }
+
   newClient(client: Client): void {
     this.clientsCollection.add(client)
   }
