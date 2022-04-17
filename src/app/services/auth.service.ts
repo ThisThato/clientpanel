@@ -18,6 +18,11 @@ export class AuthService {
     });
   }
 
+  async logout() {
+    await this.afAuth.signOut();
+    window.alert('You are logged out');
+  }
+
   getAuth() {
     return this.afAuth.authState.pipe(auth => auth);
   }
