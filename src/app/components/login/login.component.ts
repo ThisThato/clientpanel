@@ -32,10 +32,11 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.email, this.password)
       //If successfuly authenticated
       .then(res => {
+        this.router.navigate(['/']);
         this.flashMessage.show('You are now logged in', {
           cssClass: 'alert-success', timeout: 4000
         })
-        this.router.navigate(['/']);
+
       })
       //If there is an error in the promise
       .catch(err => {
