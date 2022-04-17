@@ -8,6 +8,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth'
 import { FlashMessagesModule } from 'angular2-flash-messages';
 
 import { ClientService } from './services/client.service';
+import { AuthService } from './services/auth.service';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -48,7 +49,7 @@ import { FormsModule } from '@angular/forms';
     AngularFirestoreModule,
     AngularFireAuthModule
   ],
-  providers: [ClientService],
+  providers: [ClientService, AuthService],
   bootstrap: [AppComponent]
 })
 
