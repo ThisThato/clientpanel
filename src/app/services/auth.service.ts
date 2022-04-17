@@ -32,9 +32,19 @@ export class AuthService {
     });
   }
 
+  register(email: string, password: string) {
+    return this.afAuth.createUserWithEmailAndPassword(email, password)
+      .then(res => {
+        console.log('Successfully registered!');
+
+      })
+      .catch(err => {
+        console.log('Something went wrong: ', err.message);
+      });
+  }
+
   async logout() {
     await this.afAuth.signOut();
-    window.alert('You are logged out');
   }
 
   getAuth() {
